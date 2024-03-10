@@ -2564,8 +2564,6 @@
         end    
     })
 
-    local Shop = Tabs.Shop:AddSection("Fighting Shop")
-
     Tabs.Shop:AddButton({
         Title = "Black Leg",
         Callback = function()
@@ -2636,8 +2634,6 @@
         end    
     })
 
-    local Shop = Tabs.Shop:AddSection("Abilbies Shop")
-
     Tabs.Shop:AddButton({
         Title = "Sky Jump[ $10,000 Beli ]",
         Callback = function()
@@ -2665,8 +2661,6 @@
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
         end    
     })
-
-    local Shop = Tabs.Shop:AddSection("Misc Shop")
 
     Tabs.Shop:AddButton({
         Title = "Reroll Rcae",
@@ -2785,4 +2779,4 @@
             _G.Fast_Delay = 0.1
         end
     end)
-end
+    end
