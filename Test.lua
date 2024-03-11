@@ -2519,7 +2519,7 @@
 
     local Profile = Tabs.Profile:AddSection("--------Developer--------")
 
-    Tabs.Main:AddParagraph({
+    Tabs.Profile:AddParagraph({
         Title = "Owner:Minh Nghia(Tobii)",
         Content = "This is a paragraph.\nSecond line!"
     })
@@ -2530,8 +2530,6 @@
             setclipboard(_G.Discord)
         end
     })
-
-    local Farming = Tabs.Shop:AddSection("Tab Shop")
 
     Tabs.Shop:AddButton({
         Title = "Redeem All Code",
