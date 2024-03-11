@@ -2516,6 +2516,8 @@
     -- Hehe
     --------------------------------------------------------------------------------------------------------------------------------------------
     --Create Tabs
+    local Farming = Tabs.Shop:AddSection("Tab Shop")
+
     Tabs.Shop:AddButton({
         Title = "Redeem All Code",
         Callback = function()
@@ -2562,6 +2564,11 @@
         Callback = function()
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
         end    
+    })
+
+    Tabs.Shop:AddParagraph({
+        Title = "",
+        Content = "Fighting Shop"
     })
 
     Tabs.Shop:AddButton({
@@ -2634,6 +2641,11 @@
         end    
     })
 
+    Tabs.Shop:AddParagraph({
+        Title = "",
+        Content = "Abilies Shop"
+    })
+
     Tabs.Shop:AddButton({
         Title = "Sky Jump[ $10,000 Beli ]",
         Callback = function()
@@ -2660,6 +2672,11 @@
         Callback = function()
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
         end    
+    })
+
+    Tabs.Shop:AddParagraph({
+        Title = "",
+        Content = "Misc Shop"
     })
 
     Tabs.Shop:AddButton({
@@ -2758,8 +2775,6 @@
             end
         end)
 
-
-    local Farming = Tabs.SettingFarm:AddSection("Setting Farm")
     local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
         local DropdownDelayAttack = Tabs.SettingFarm:AddDropdown("DropdownDelayAttack", {
