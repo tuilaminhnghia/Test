@@ -2516,6 +2516,21 @@
     -- Hehe
     --------------------------------------------------------------------------------------------------------------------------------------------
     --Create Tabs
+
+    local Profile = Tabs.Profile:AddSection("--------Developer--------")
+
+    Tabs.Main:AddParagraph({
+        Title = "Owner:Minh Nghia(Tobii)",
+        Content = "This is a paragraph.\nSecond line!"
+    })
+    Tabs.Profile:AddButton({
+        Title = "Facebook - Minh Nghia",
+        Description = "Profile Owner",
+        Callback = function()
+            setclipboard(_G.Discord)
+        end
+    })
+
     local Farming = Tabs.Shop:AddSection("Tab Shop")
 
     Tabs.Shop:AddButton({
