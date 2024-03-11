@@ -2517,7 +2517,7 @@
     --------------------------------------------------------------------------------------------------------------------------------------------
     --Create Tabs
 
-    local Profile = Tabs.Profile:AddSection("--------Developer--------")
+    local Profile = Tabs.Profile:AddSection("------------------------Developer------------------------")
 
     Tabs.Profile:AddParagraph({
         Title = "Owner:Minh Nghia(Tobii)",
