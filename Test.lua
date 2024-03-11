@@ -2829,11 +2829,7 @@
         end
 end)
 
-:AddToggle("Auto Haki",true,function(value)
-    _G.AUTOHAKI = value
-    end)
-
-local Toggle = Tabs.Main:AddToggle("Auto Buso",true,function(value)
+local Toggle = Tabs.SettingFarm:AddToggle("Auto Buso",true,function(value)
     _G.AUTOHAKI = value
     end)
 end
