@@ -2430,11 +2430,19 @@
         end
     end)
     --auto turn haki
-    function AutoHaki()
-        if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HasBuso") then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
-        end
-    end
+        spawn(function()
+            while wait(.1) do
+                if _G.AUTOHAKI then 
+                    if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                        local args = {
+                            [1] = "Buso"
+                        }
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                    end
+                end
+            end
+        end)
+
     ---Bypass Teleport
     function to(P)
         repeat wait(0.5)
@@ -2820,4 +2828,12 @@
             _G.Fast_Delay = 0.1
         end
 end)
+
+:AddToggle("Auto Haki",true,function(value)
+    _G.AUTOHAKI = value
+    end)
+
+local Toggle = Tabs.Main:AddToggle("Auto Buso",true,function(value)
+    _G.AUTOHAKI = value
+    end)
 end
