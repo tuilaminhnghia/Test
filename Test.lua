@@ -14,7 +14,7 @@
         MinimizeKey = Enum.KeyCode.End
     })
     local Tabs = {
-        Profile = Window:AddTab({ Title = "Tab Profile", Icon = "users" }),
+        Profile = Window:AddTab({ Title = "Information", Icon = "rbxassetid://10723415903" }),
         Shop = Window:AddTab({ Title = "Tab Shop", Icon = "shopping-cart" }),
         SettingFarm = Window:AddTab({Title = "Setting Farm", Icon = "settings-2" }),
         Main = Window:AddTab({ Title = "Tab Main", Icon = "home" }),
@@ -2517,20 +2517,34 @@
     --------------------------------------------------------------------------------------------------------------------------------------------
     --Create Tabs
 
-    local Profile = Tabs.Profile:AddSection("------------------------Developer------------------------")
+    local Profile = Tabs.Profile:AddSection("Developer")
+
+    local Creator = TienTiny:AddLabel('Hii '..game.Players.LocalPlayer.Name.." To Tên HUB !! Thanks Using.")
+    Tabs.Profile:AddParagraph({
+        Title = "Tobii Hub", 
+        Content = ""
+    })
 
     Tabs.Profile:AddParagraph({
-        Title = "Owner:Minh Nghia(Tobii)",
-        Content = "This is a paragraph.\nSecond line!"
+        Title = "Owner: Ng Minh Nghia(Tobii)",
+        Content = ""
     })
     Tabs.Profile:AddButton({
         Title = "Facebook - Minh Nghia",
-        Description = "Profile Owner",
+        Description = "Owner",
+        Callback = function()
+            setclipboard(_G.Facebook)
+        end
+    })
+    Tabs.Profile:AddButton({
+        Title = "Discord - Minh Nghia",
+        Description = "Owner",
         Callback = function()
             setclipboard(_G.Discord)
         end
     })
 
+-------Shop-------------------------------------------------------------------------
     Tabs.Shop:AddButton({
         Title = "Redeem All Code",
         Callback = function()
