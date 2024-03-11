@@ -2519,7 +2519,6 @@
 
     local Profile = Tabs.Profile:AddSection("Developer")
 
-    local Creator = TienTiny:AddLabel('Hii '..game.Players.LocalPlayer.Name.." To Tên HUB !! Thanks Using.")
     Tabs.Profile:AddParagraph({
         Title = "Tobii Hub", 
         Content = ""
