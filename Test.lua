@@ -3,6 +3,7 @@
     local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tuilaminhnghia/Tobii-Hub/main/mnghiadz.lua"))()
     ----------------------------------------------------------------------------------------------------------------------------------------------
+    repeat wait() until game:IsLoaded()
     local Window = Fluent:CreateWindow({
         Title = "Tobii | Blox Fruits",
         SubTitle = "by Minh Nghia",
