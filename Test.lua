@@ -2429,7 +2429,7 @@
             wait(1)
         end
     end)
-    --auto turn haki
+    --turn haki
         spawn(function()
             while wait(.1) do
                 if _G.AUTOHAKI then 
@@ -2527,10 +2527,23 @@
 
     local Profile = Tabs.Profile:AddSection("Developer")
 
-    Tabs.Profile:AddParagraph({
-        Title = "Tobii Hub", 
-        Content = ""
+    local Status = Tabs.Profile:AddParagraph({
+        Title = "Tobii Hub",
+        Content = "Status:"
     })
+    
+    function UpdateClient()
+    local Fps = workspace:GetRealPhysicsFPS()
+    local Name = ..game.Players.LocalPlayer.Name..
+    local Status1 = "Hii "..Name.."  Thank You For Using
+    Status:SetDesc(Status1) 
+    end
+    
+    spawn(function()
+        while true do wait(.1)
+            UpdateClient()
+        end
+    end)
 
     Tabs.Profile:AddParagraph({
         Title = "Owner: Ng Minh Nghia(Tobii)",
@@ -2829,7 +2842,6 @@
         end
 end)
 
-local Toggle = Tabs.SettingFarm:AddToggle("Auto Buso",true,function(value)
-    _G.AUTOHAKI = value
-    end)
-end
+local ToggleBuso = Tabs.SettingFarm:AddToggle("AutoBuso", {
+    Title = "Auto Buso",
+    Default = true })
