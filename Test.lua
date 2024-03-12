@@ -2526,7 +2526,7 @@
 
     local Profile = Tabs.Profile:AddSection("Developer")
 
-    local Status = Tabs.Profile:AddParagraph({
+    local Profile = Tabs.Profile:AddParagraph({
         Title = "Tobii Hub",
         Content = "Beta Version"
     })
