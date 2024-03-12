@@ -2873,10 +2873,11 @@ Options.AutoTurnOnV3:SetValue(false)
 AutoTurnOnV3:OnChanged(function(value)
     _G.TurnOnV3 = value
 end)
+
     spawn(function()
         while wait() do
             pcall(function()
-                if _G.AutoAwakeningRace then
+                if _G.TurnOnV3 then
                     game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
                     wait(0.1)
                     game:GetService("VirtualInputManager"):SendKeyEvent(false,"T",false,game)
@@ -2894,7 +2895,7 @@ end)
     spawn(function()
         while wait() do
             pcall(function()
-                if _G.AutoAwakeningRace then
+                if _G.TurnOnV4 then
                     game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
                     wait(0.1)
                     game:GetService("VirtualInputManager"):SendKeyEvent(false,"Y",false,game)
