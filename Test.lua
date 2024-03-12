@@ -2524,9 +2524,7 @@
     --------------------------------------------------------------------------------------------------------------------------------------------
     --Create Tabs
 
-    local Profile = Tabs.Profile:AddSection("Developer")
-
-    local Profile = Tabs.Profile:AddParagraph({
+    Tabs.Profile:AddParagraph({
         Title = "Tobii Hub",
         Content = "Beta Version"
     })
