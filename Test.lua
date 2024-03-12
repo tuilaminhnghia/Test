@@ -2534,7 +2534,7 @@
     function UpdateClient()
     local Fps = workspace:GetRealPhysicsFPS()
     local Name = ..game.Players.LocalPlayer.Name..
-    local Status1 = "Hii "..Name.."  Thank You For Using
+    local Status1 = "Hii "..Name.."  Thank You For Using"
     Status:SetDesc(Status1) 
     end
     
