@@ -2875,7 +2875,7 @@ AutoTurnOnV3:OnChanged(function(value)
 end)
 
     spawn(function()
-        while wait() do
+        while task.wait() do
             pcall(function()
                 if _G.TurnOnV3 then
                     game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
@@ -2893,7 +2893,7 @@ AutoTurnOnV4:OnChanged(function(value)
     _G.TurnOnV4 = value
 end)
     spawn(function()
-        while wait() do
+        while task.wait() do
             pcall(function()
                 if _G.TurnOnV4 then
                     game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
