@@ -2493,6 +2493,17 @@
             end)
         end
 
+        task.spawn(function()
+            while true and task.wait(.5) do
+                if AllowRunService == true then
+                    local ohString1 = "SetTeam"
+                    local ohString2 = "Pirates"
+        
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(ohString1, ohString2)
+                end
+            end
+        end)
+
     --------------------------------------------------------------------------------------------------------------------------------------------
     ---Close UI
     local ScreenGui = Instance.new("ScreenGui")
@@ -2827,3 +2838,20 @@
         end
     end)
 end
+local AutoBuso = Tabs.SettingFarm:AddToggle("AutoBuso", {Title = "Auto Buso", Default = true })
+Options.AutoBuso:SetValue(true)
+AutoBuso:OnChanged(function(value)
+    _G.AutoHaki = value
+end)
+
+task.spawn(function()
+    while task.wait() do
+    pcall(function()
+        if _G.AutoHaki then
+            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+            end
+        end
+    end)
+    end
+end)
