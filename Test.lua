@@ -2429,19 +2429,6 @@
             wait(1)
         end
     end)
-    --turn haki
-        spawn(function()
-            while wait(.1) do
-                if _G.AUTOHAKI then 
-                    if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-                        local args = {
-                            [1] = "Buso"
-                        }
-                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                    end
-                end
-            end
-        end)
 
     ---Bypass Teleport
     function to(P)
@@ -2855,3 +2842,61 @@ task.spawn(function()
     end)
     end
 end)
+
+local AutoKenToggle = Tabs.SettingFarm:AddToggle("AutoKen_Toggle", {Title = "Auto Haki Observation", Default = false })
+Options.AutoKen_Toggle:SetValue(false)
+
+AutoKenToggle:OnChanged(function(value)
+    _G.AutoKen = value
+end)
+
+spawn(function()
+    while task.wait() do
+    pcall(function()
+        if _G.AutoKen then  
+            if game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and game.Players.LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+            else
+                wait(1)
+                game:service('VirtualUser'):CaptureController()
+                game:service('VirtualUser'):SetKeyDown('0x65')
+                wait(2)
+                game:service('VirtualUser'):SetKeyUp('0x65')
+            end
+        end
+    end)
+    end
+end)
+
+local AutoTurnOnV3 = Tabs.SettingFarm:AddToggle("AutoTurnOnV3", {Title = "Auto Turn On V3", Default = false })
+Options.AutoTurnOnV3:SetValue(false)
+
+AutoTurnOnV3:OnChanged(function(value))
+    _G.TurnOnV3 = value
+    spawn(function()
+        while wait() do
+            pcall(function()
+                if _G.AutoAwakeningRace then
+                    game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
+                    wait(0.1)
+                    game:GetService("VirtualInputManager"):SendKeyEvent(false,"T",false,game)
+                end
+            end)
+        end
+        end)
+
+local AutoTurnOnV4 = Tabs.SettingFarm:AddToggle("AutoTurnOnV4", {Title = "Auto Turn On V4", Default = false })
+Options.AutoTurnOnV4:SetValue(false)
+
+AutoTurnOnV4:OnChanged(function(value))
+    _G.TurnOnV4 = value
+    spawn(function()
+        while wait() do
+            pcall(function()
+                if _G.AutoAwakeningRace then
+                    game:GetService("VirtualInputManager"):SendKeyEvent(true,"Y",false,game)
+                    wait(0.1)
+                    game:GetService("VirtualInputManager"):SendKeyEvent(false,"Y",false,game)
+                end
+            end)
+        end
+        end)
