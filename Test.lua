@@ -2825,7 +2825,3 @@
             _G.Fast_Delay = 0.1
         end
 end)
-
-local ToggleBuso = Tabs.SettingFarm:AddToggle("AutoBuso", {
-    Title = "Auto Buso",
-    Default = true })
