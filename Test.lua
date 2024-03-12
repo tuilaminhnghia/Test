@@ -2824,4 +2824,5 @@
         elseif _G.FastAttack_Mode == "Super Fast Attack" then
             _G.Fast_Delay = 0.1
         end
-end)
+    end)
+end
