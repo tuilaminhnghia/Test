@@ -2528,21 +2528,8 @@
 
     local Status = Tabs.Profile:AddParagraph({
         Title = "Tobii Hub",
-        Content = "Status:"
+        Content = "Beta Version"
     })
-    
-    function UpdateClient()
-    local Fps = workspace:GetRealPhysicsFPS()
-    local Name = ..game.Players.LocalPlayer.Name..
-    local Status1 = "Hii "..Name.."  Thank You For Using"
-    Status:SetDesc(Status1) 
-    end
-    
-    spawn(function()
-        while true do wait(.1)
-            UpdateClient()
-        end
-    end)
 
     Tabs.Profile:AddParagraph({
         Title = "Owner: Ng Minh Nghia(Tobii)",
