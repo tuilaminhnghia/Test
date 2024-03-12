@@ -2870,8 +2870,9 @@ end)
 local AutoTurnOnV3 = Tabs.SettingFarm:AddToggle("AutoTurnOnV3", {Title = "Auto Turn On V3", Default = false })
 Options.AutoTurnOnV3:SetValue(false)
 
-AutoTurnOnV3:OnChanged(function(value))
+AutoTurnOnV3:OnChanged(function(value)
     _G.TurnOnV3 = value
+end)
     spawn(function()
         while wait() do
             pcall(function()
@@ -2887,8 +2888,9 @@ AutoTurnOnV3:OnChanged(function(value))
 local AutoTurnOnV4 = Tabs.SettingFarm:AddToggle("AutoTurnOnV4", {Title = "Auto Turn On V4", Default = false })
 Options.AutoTurnOnV4:SetValue(false)
 
-AutoTurnOnV4:OnChanged(function(value))
+AutoTurnOnV4:OnChanged(function(value)
     _G.TurnOnV4 = value
+end)
     spawn(function()
         while wait() do
             pcall(function()
@@ -2901,4 +2903,3 @@ AutoTurnOnV4:OnChanged(function(value))
         end
         end)
         end
-        
